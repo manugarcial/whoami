@@ -7,11 +7,14 @@
 <style>
   .card {
     padding: 20px;
-    margin: 10px;
     border-radius: 8px;
     text-align: center;
     color: #333;
     transition: background-color 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .card a {
