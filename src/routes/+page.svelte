@@ -28,27 +28,45 @@
   <p>{message}</p> -->
   <div class="card-container">
     <Card 
-      title="My GitHub"
-      link="https://github.com/username"
-      bgColor="#4CAF50" 
+      title="My Resume"
+      link="/resume"
+      bgColor="#FFDF53" 
+      bgImage="/images/portfolio-logo.svg"
     />
 
     <Card 
-      title="My LinkedIn"
-      link="https://linkedin.com/in/username"
-      bgColor="#0077B5" 
-    />
-  
-    <Card 
-      title="My Portfolio"
+      title="My Career Path"
       link="/portfolio"
-      bgColor="#FF6347" 
+      bgColor="#FFDF53" 
+      bgImage="/images/portfolio-logo.svg"
+    />
+
+    <Card 
+      title="My Projects"
+      link="https://github.com/username"
+      bgColor="#A8D58A" 
+      bgImage="/images/github-logo.svg"
     />
 
     <Card 
       title="My Blog"
       link="/blog"
-      bgColor="#A3A347" 
+      bgColor="#C7DF5F" 
+      bgImage="/images/blog-logo.svg"
+    />
+
+    <Card 
+      title="My GitHub"
+      link="https://github.com/username"
+      bgColor="#A8D58A" 
+      bgImage="/images/github-logo.svg"
+    />
+
+    <Card 
+      title="My LinkedIn"
+      link="https://linkedin.com/in/username"
+      bgColor="#A1CFF7" 
+      bgImage="/images/linkedin-logo.svg"
     />
   </div>
 </main>

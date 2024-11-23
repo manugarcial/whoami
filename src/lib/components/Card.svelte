@@ -1,7 +1,8 @@
 <script lang="ts">
   export let title: string;
   export let link: string;
-  export let bgColor: string = '#f0f0f0';
+  export let bgColor = '#FFF';
+  export let bgImage = '';
 </script>
 
 <style>
@@ -15,6 +16,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);/* Set background image */
+    background-size: 70px 70px; /* Resize the logo */
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .card a {
@@ -26,9 +32,19 @@
   .card:hover {
     background-color: #e0e0e0;
   }
+
+  .content {
+    flex: 1;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 0;
+  }
 </style>
 
-<div class="card" style="background-color: {bgColor}">
-  <h2>{title}</h2>
-  <a href={link} target="_blank">Visit Link</a>
-</div>
+<a href={link} class="card" style="--bg-color: {bgColor}; --bg-image: url('{bgImage}')">
+  <div class="content">
+    <h3>{title}</h3>
+  </div>
+</a>

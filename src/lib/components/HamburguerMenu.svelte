@@ -224,6 +224,10 @@
     color: #00d1b2;
   }
 
+  .logo {
+    color: white;
+  }
+
   .overlay {
     position: fixed;
     top: 0;
@@ -244,7 +248,7 @@
     <span></span>
     <span></span>
   </button>
-
+  <div class="logo"><a href="/" on:click={closeMenu}>Whoami_</a></div>
   <!-- User Icon -->
   <div class="user-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
@@ -270,10 +274,11 @@
 <div class="overlay" on:click={closeMenu} style:display={isOpen ? 'block' : 'none'}></div>
 <div class={`menu ${isOpen ? 'open' : ''}`}>
   <nav>
-    <li><a href="/" on:click={closeMenu}>Home</a></li>
     <li><a href="/resume" on:click={closeMenu}>Resume</a></li>
     <li><a href="/career" on:click={closeMenu}>Career Path</a></li>
     <li><a href="/projects" on:click={closeMenu}>Projects</a></li>
     <li><a href="/blog" on:click={closeMenu}>Blog</a></li>
+    <li><a href="/blog" on:click={closeMenu}>Github</a></li>
+    <li><a href="/blog" on:click={closeMenu}>Linkedin</a></li>
   </nav>
 </div>
