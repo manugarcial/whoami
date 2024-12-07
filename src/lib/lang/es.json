@@ -3,5 +3,14 @@
   "resume": "Currículum",
   "career_path": "Carrera",
   "projects": "Proyectos",
-  "blog": "Blog"
+  "blog": "Blog",
+  "github": "Github",
+  "linkedin": "LinkedIn",
+  "blog_1_title": "Mi Primer Proyecto con Svelte: Aprendiendo a Crear Sitios Web Eficientes",
+  "blog_1_summary": "Explorar Svelte en mi primer proyecto marca el inicio de un camino hacia una tecnología diseñada para construir sitios web altamente eficientes. Mi objetivo es aprender haciendo: crear un proyecto desde cero para entender las características únicas de Svelte, como su ligereza, reactividad y velocidad.",
+  "blog_1_detail": "Cuando escuché por primera vez sobre Svelte, me intrigó su promesa de simplicidad y eficiencia en la construcción de aplicaciones web. A diferencia de los frameworks tradicionales que añaden una capa de ejecución, Svelte compila los componentes en JavaScript altamente optimizado durante la etapa de construcción, lo que garantiza tiempos de carga más rápidos y un uso mínimo de recursos.\nMi objetivo para este proyecto no es solo crear un sitio web, sino sumergirme completamente en el ecosistema de Svelte. Planeo explorar su gestión reactiva del estado, su arquitectura basada en componentes y la ausencia de un DOM virtual. Al profundizar en esta tecnología, busco aprender a diseñar experiencias web modernas y de alto rendimiento.\nEste camino implicará desarrollar una idea de proyecto, tal vez un portafolio personal o una pequeña plataforma de comercio electrónico. Comenzaré por comprender los fundamentos de Svelte: configurar un proyecto, escribir mis primeros componentes y gestionar el estado de forma reactiva. A partir de ahí, exploraré conceptos avanzados como la renderización en el servidor (SSR) e integración con APIs externas.\nA través de este proceso de aprendizaje práctico, espero no solo dominar Svelte, sino también adoptar las mejores prácticas para crear sitios web rápidos, ligeros y fáciles de usar. Este proyecto es mi primer paso para dominar una de las herramientas de desarrollo web más emocionantes disponibles hoy en día.\nAprendizajes Clave que Anticipo:\nDominar la estructura de componentes y reactividad de Svelte.\nAprender a optimizar el rendimiento del sitio web mediante un diseño eficiente.\nEntender las herramientas potentes de SvelteKit para enrutamiento, SSR y despliegue.\nMantente al tanto de las actualizaciones de este viaje, ya que compartiré las lecciones aprendidas, los desafíos enfrentados y el resultado final.",
+  "blog_published": "Publicado en ",
+  "blog_not_found": "Blog no encontrado",
+  "blog_back": "Volver a Blog",
+  "read_more": "Leer mas"
 }

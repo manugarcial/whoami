@@ -1,5 +1,5 @@
 <script lang="ts">
-  // You can add any script logic you want for the footer here
+  import { t } from 'svelte-i18n';
 </script>
 
 <style>
@@ -15,7 +15,6 @@
     margin-top: 40px;
   }
 
-  /* Desktop version: align items in the same row */
   @media (min-width: 768px) {
     .footer-content {
       display: flex;
@@ -61,8 +60,8 @@
   <div class="footer-content">
     <p>© 2024 My Portfolio</p>
     <div class="social-links">
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://github.com/manugarcial" target="_blank">{$t('github')}</a>
+      <a href="https://linkedin.com/in/manuel-g-a5b879156" target="_blank">{$t('linkedin')}</a>
     </div>
   </div>
   <p>

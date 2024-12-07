@@ -7,10 +7,6 @@
 	let { children } = $props();
 </script>
 
-<!-- <style lang="scss">
-  @import '../styles/global.scss';
-</style> -->
-
 <HamburgerMenu />
 
 <main>
@@ -20,3 +16,15 @@
 </main>
 
 <Footer />
+
+<style>
+  /* Ensure the page occupies at least the full height of the viewport */
+  :global(html, body) {
+    height: 100%; /* Ensure body and html span the full viewport height */
+    margin: 0;    /* Reset margin for consistent layout */
+  }
+
+  main {
+    min-height: 81vh;
+  }
+</style>

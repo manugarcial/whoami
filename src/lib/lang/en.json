@@ -3,5 +3,14 @@
   "resume": "Resume",
   "career_path": "Career Path",
   "projects": "Projects",
-  "blog": "Blog"
+  "blog": "Blog",
+  "github": "Github",
+  "linkedin": "LinkedIn",
+  "blog_1_title": "My First Project with Svelte: Learning to Build Efficient Websites",
+  "blog_1_summary": "Exploring Svelte for my first project marks the beginning of a journey into a technology designed for building highly efficient websites. My goal is to learn by doing—creating a project from scratch to understand Svelte's unique features, such as its lightweight nature, reactivity, and speed.",
+  "blog_1_detail": "When I first heard about Svelte, I was intrigued by its promise of simplicity and efficiency in building web applications. Unlike traditional frameworks that add a runtime layer, Svelte compiles components into highly optimized JavaScript during build time, ensuring faster load times and minimal resource usage.\nMy goal for this project is not just to create a website but to immerse myself in Svelte’s ecosystem. I plan to explore its reactive state management, component-based architecture, and the absence of a virtual DOM. By diving deep into this technology, I aim to understand how to craft modern, high-performance web experiences.\nThe journey will involve brainstorming a project idea—perhaps a personal portfolio or a small e-commerce platform. I will start with understanding the fundamentals of Svelte: setting up a project, writing my first components, and managing state reactively. From there, I’ll explore advanced concepts like server-side rendering (SSR) and integrating external APIs.\nThrough this hands-on learning process, I hope to not only become proficient in Svelte but also adopt best practices for building websites that are fast, lightweight, and user-friendly. This project is my stepping stone into mastering one of the most exciting web development tools available today.\nKey Learnings I Anticipate:\nMastering Svelte's component structure and reactivity.\nLearning to optimize website performance through efficient design.\nUnderstanding SvelteKit’s powerful tools for routing, SSR, and deployment.\nStay tuned for updates on this journey, as I’ll be sharing lessons learned, challenges faced, and the final results.",
+  "blog_published": "Published on ",
+  "blog_not_found": "Blog post not found.",
+  "blog_back": "Back to Blog",
+  "read_more": "Read more"
 }

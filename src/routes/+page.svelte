@@ -1,4 +1,5 @@
 <script>
+  import { t } from 'svelte-i18n';
   import Card from '../lib/components/Card.svelte';
   // import { onMount } from 'svelte';
 
@@ -28,44 +29,44 @@
   <p>{message}</p> -->
   <div class="card-container">
     <Card 
-      title="My Resume"
+      title="{$t('resume')}"
       link="/resume"
-      bgColor="#FFDF53" 
+      bgColor="#FFAF53" 
       bgImage="/images/portfolio-logo.svg"
     />
 
     <Card 
-      title="My Career Path"
+      title="{$t('career_path')}"
       link="/portfolio"
       bgColor="#FFDF53" 
       bgImage="/images/portfolio-logo.svg"
     />
 
     <Card 
-      title="My Projects"
-      link="https://github.com/username"
+      title="{$t('projects')}"
+      link="/projects"
       bgColor="#A8D58A" 
       bgImage="/images/github-logo.svg"
     />
 
     <Card 
-      title="My Blog"
+      title="{$t('blog')}"
       link="/blog"
       bgColor="#C7DF5F" 
       bgImage="/images/blog-logo.svg"
     />
 
     <Card 
-      title="My GitHub"
-      link="https://github.com/username"
-      bgColor="#A8D58A" 
+      title="{$t('github')}"
+      link="https://github.com/manugarcial"
+      bgColor="#A1BFF7" 
       bgImage="/images/github-logo.svg"
     />
 
     <Card 
-      title="My LinkedIn"
-      link="https://linkedin.com/in/username"
-      bgColor="#A1CFF7" 
+      title="{$t('linkedin')}"
+      link="https://linkedin.com/in/manuel-g-a5b879156"
+      bgColor="#A1DFF7" 
       bgImage="/images/linkedin-logo.svg"
     />
   </div>
@@ -80,14 +81,13 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-    gap: 20px; /* Space between cards */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  /* Optionally, you can adjust the responsiveness of the layout */
   @media (max-width: 768px) {
     .card-container {
-      grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+      grid-template-columns: 1fr;
     }
   }
 </style>

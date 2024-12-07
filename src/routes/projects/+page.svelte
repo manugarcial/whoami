@@ -5,27 +5,31 @@
 <main>
   <div class="card-container">
     <Card 
-      title="Project 1"
-      link="https://github.com/username"
-      bgColor="#4CAF50" 
+      title="Financapp"
+      link="https://github.com/manugarcial/my-finances"
+      bgColor="#A8D58A"
+      bgImage="/images/finances.svg"
     />
 
     <Card 
-      title="Project 2"
-      link="https://github.com/username"
-      bgColor="#4CAF50" 
+      title="Whoami"
+      link="https://github.com/manugarcial/whoami"
+      bgColor="#C7DF5F"
+      bgImage="/images/employee.svg"
     />
   
     <Card 
-      title="Project 3"
-      link="https://github.com/username"
-      bgColor="#4CAF50" 
+      title="Hema Sewing"
+      link="https://github.com/manugarcial/Hema"
+      bgColor="#A1BFF7"
+      bgImage="/images/hema-sewing.svg"
     />
 
     <Card 
-      title="Project 4"
-      link="https://github.com/username"
-      bgColor="#4CAF50" 
+      title="iTrack (To be started)"
+      link="https://github.com/manugarcial"
+      bgColor="#A1DFF7"
+      bgImage="/images/notes.svg"
     />
   </div>
 </main>

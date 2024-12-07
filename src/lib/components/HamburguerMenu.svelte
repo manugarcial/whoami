@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from 'svelte-i18n';
   import { writable } from 'svelte/store';
   import { init, register, locale } from 'svelte-i18n';
 
@@ -207,8 +208,8 @@
 
   /* Reset the default styles of <li> */
   nav li {
-    list-style-type: none; /* Remove the default bullet points */
-    margin: 0; /* Remove any default margin */
+    list-style-type: none;
+    margin: 0;
   }
 
   nav li a {
@@ -274,11 +275,11 @@
 <div class="overlay" on:click={closeMenu} style:display={isOpen ? 'block' : 'none'}></div>
 <div class={`menu ${isOpen ? 'open' : ''}`}>
   <nav>
-    <li><a href="/resume" on:click={closeMenu}>Resume</a></li>
-    <li><a href="/career" on:click={closeMenu}>Career Path</a></li>
-    <li><a href="/projects" on:click={closeMenu}>Projects</a></li>
-    <li><a href="/blog" on:click={closeMenu}>Blog</a></li>
-    <li><a href="/blog" on:click={closeMenu}>Github</a></li>
-    <li><a href="/blog" on:click={closeMenu}>Linkedin</a></li>
+    <li><a href="/resume" on:click={closeMenu}>{$t('resume')}</a></li>
+    <li><a href="/career" on:click={closeMenu}>{$t('career_path')}</a></li>
+    <li><a href="/projects" on:click={closeMenu}>{$t('projects')}</a></li>
+    <li><a href="/blog" on:click={closeMenu}>{$t('blog')}</a></li>
+    <li><a href="https://github.com/manugarcial" on:click={closeMenu}>{$t('github')}</a></li>
+    <li><a href="https://linkedin.com/in/manuel-g-a5b879156" on:click={closeMenu}>{$t('linkedin')}</a></li>
   </nav>
 </div>
