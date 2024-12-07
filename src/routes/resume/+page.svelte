@@ -1,18 +1,14 @@
 <script lang="ts">
-  // import { t } from 'svelte-i18n';
+  import { t } from 'svelte-i18n';
 
-  // Print function
   function printResume() {
     const printContents = document.querySelector('main')?.innerHTML;
     const originalContents = document.body.innerHTML;
 
-    // Temporarily replace body content with the main content
     document.body.innerHTML = printContents || '';
 
-    // Trigger print
     window.print();
 
-    // Restore original content
     document.body.innerHTML = originalContents;
   }
 </script>
@@ -94,10 +90,9 @@
     background-color: #357ABD;
   }
 
-  /* Print-specific styles */
   @media print {
     body *, .print-button-container {
-      visibility: hidden; /* Hide everything except main */
+      visibility: hidden;
     }
     main {
       visibility: visible;
@@ -109,15 +104,13 @@
   }
 </style>
 
-<!-- <h1>{$t('career_path')}</h1> -->
-
 <main>
   <div class="header">
     <div>
       <h1>Manuel García</h1>
     </div>
     <div class="contact-info">
-      <p>Av. Alcoy 45, 5th, 03009, Alicante, Spain</p>
+      <p>{$t("contact-info")}</p>
       <p>
         <a href="tel:+34635968035" style="color: inherit; text-decoration: none;">+34 635 96 80 35</a>
       </p>
@@ -128,115 +121,99 @@
   </div>
   <section class="summary">
     <br>
-    <h2 class="section-title">Proffessional Role</h2>
-    <p>A hard-working, creative, and sociable IT manager with
-      years of experience leading tech projects, delivering the
-      highest quality of services, and maintaining relationships
-      with stakeholders and clients.</p>
+    <h2 class="section-title">{$t("proffesional_role")}</h2>
+    <p>{$t("proffesional_summary")}</p>
   </section>
   <section class="experience">
     <hr />
-    <h2 class="section-title">WORK EXPERIENCE</h2>
-    <h3><strong>SERVICE IT MANAGER</strong></h3>
-    <p>Better Consultants S.L. | Remote | February 2024 - Now</p>
+    <h2 class="section-title">{$t("work_experience")}</h2>
+    <h3><strong>{$t("work_experience_1_title")}</strong></h3>
+    <p>{$t("work_experience_1_subtitle")}</p>
     <br>
-      <p>Oversaw IT service delivery alignment with goals,
-        optimized resource allocation. Led incident, problem,
-        and change management processes. Ensured
-        compliance and communicated effectively with
-        stakeholders.
-      </p>
-      <br>
-      <ul>
-        <li>Client - Provider communication</li>
-        <li>Team management and developments supervisor</li>
-        <li>Quality assurance</li>
-        <li>Project management</li>
-      </ul>
-    <br>
-    <h3><strong>DRUPAL WEB DEVELOPER</strong></h3>
-    <p>Coosto Spain S.L. | Alicante | July 2020 - January 2024</p>
-    <br>
-    <p>Single-handedly spearheaded the dynamic
-      development of the company's primary website.
-      Directed migrations, crafted modules, facilitated
-      updates, and pioneered the development of novel
-      components.</p>
+    <p>{$t("work_experience_1_detail")}
+    </p>
     <br>
     <ul>
-      <li>Technical support for content creation</li>
-      <li>New feature developments</li>
-      <li>Google analytics and Google Tag Manager management</li>
-      <li>SEO enhancements</li>
+      <li>{$t("work_experience_1_feature_1")}</li>
+      <li>{$t("work_experience_1_feature_2")}</li>
+      <li>{$t("work_experience_1_feature_3")}</li>
+      <li>{$t("work_experience_1_feature_4")}</li>
     </ul>
     <br>
-    <h3><strong>RESEARCH FELLOW</strong></h3>
-    <p>University of Jaén | Jaén | September 2018 - December 2018</p>
+    <h3><strong>{$t("work_experience_2_title")}</strong></h3>
+    <p>{$t("work_experience_2_subtitle")}</p>
     <br>
-    <p>Research fellow in a team of developers in the
-      Department of Computer Science, Natural Language
-      Processing area.
-      <b>Project:</b> Representation of hate within natural
-      language in social networks.</p>
+    <p>{$t("work_experience_2_detail")}
+    </p>
     <br>
     <ul>
-      <li>Web development</li>
-      <li>Sentiment analysis</li>
-      <li>Natural language processing</li>
-      <li>Integrations of deep learning neural networks
-        based on word dictionaries</li>
+      <li>{$t("work_experience_2_feature_1")}</li>
+      <li>{$t("work_experience_2_feature_2")}</li>
+      <li>{$t("work_experience_2_feature_3")}</li>
+      <li>{$t("work_experience_2_feature_4")}</li>
+    </ul>
+    <br>
+    <h3><strong>{$t("work_experience_3_title")}</strong></h3>
+    <p>{$t("work_experience_3_subtitle")}</p>
+    <br>
+    <p>{$t("work_experience_3_detail")}
+    </p>
+    <br>
+    <ul>
+      <li>{$t("work_experience_3_feature_1")}</li>
+      <li>{$t("work_experience_3_feature_2")}</li>
+      <li>{$t("work_experience_3_feature_3")}</li>
+      <li>{$t("work_experience_3_feature_4")}</li>
     </ul>
     <br>
   </section>
   <section class="education">
     <hr />
-    <h2 class="section-title">EDUCATION</h2>
-    <p><strong>Degree in Computer Engineering with a year abroad at Umeå Universitet, Sweden</strong> | University of Jaén, Jaén | 2014 / 2019</p>
+    <h2 class="section-title">{$t("education")}</h2>
+    <p><strong>{$t("education_1_strong")}</strong> {$t("education_1")}</p>
     <br>
-    <p><strong>Master's Degree in Web Application Development</strong> | Open university of Catalunya, Remote | 2019 / 2020</p>
+    <p><strong>{$t("education_2_strong")}</strong> {$t("education_2")}</p>
     <br>
   </section>
   <section class="volunteering">
     <hr />
-    <h2 class="section-title">VOLUNTEERING</h2>
-    <p><strong>Erasmus Student Network (ESN)| September 2019 - June 2021 </strong></p>
-    <p>Website content administrator - Drupal 7</p>
-    <p>Vice-chair of the committee (ITcom) for the
-      development of a new template for the association
-      at European level, Satellite 5 (theme) - Drupal 9</p>
+    <h2 class="section-title">{$t("volunteering")}</h2>
+    <p><strong>{$t("volunteering_title")}</strong></p>
+    <p>{$t("volunteering_subtitle")}</p>
+    <p>{$t("volunteering_content")}</p>
     <br>
   </section>
   <section class="skills">
     <hr />
-    <h2 class="section-title">SKILLS</h2>
-    <h3><strong>Technical</strong></h3>
+    <h2 class="section-title">{$t("skills")}</h2>
+    <h3><strong>{$t("skills_technical")}</strong></h3>
     <ul>
-      <li>Drupal (8-10) - Advanced</li>
-      <li>HTML/CSS/JavaScript - Advanced</li>
-      <li>Vue/Svelte/TypeScript - Intermediate</li>
-      <li>PHP/Python - Intermediate</li>
-      <li>Java/Go - Beginner</li>
+      <li>{$t("skills_technical_1")}</li>
+      <li>{$t("skills_technical_2")}</li>
+      <li>{$t("skills_technical_3")}</li>
+      <li>{$t("skills_technical_4")}</li>
+      <li>{$t("skills_technical_5")}</li>
     </ul>
-    <h3><strong>Proffessional</strong></h3>
+    <h3><strong>{$t("skills_proffessional")}</strong></h3>
     <ul>
-      <li>Scrum format and Kanban</li>
-      <li>Code quality</li>
-      <li>Teamwork management</li>
-      <li>Client relationship quality</li>
+      <li>{$t("skills_proffessional_1")}</li>
+      <li>{$t("skills_proffessional_2")}</li>
+      <li>{$t("skills_proffessional_3")}</li>
+      <li>{$t("skills_proffessional_4")}</li>
     </ul>
   </section>
   <section class="languages">
     <hr />
-    <h2 class="section-title">Languages</h2>
+    <h2 class="section-title">{$t("languages")}</h2>
     <ul>
-      <li>Spanish - Native speaker</li>
-      <li>English - Fluent</li>
-      <li>German - Basic</li>
+      <li>{$t("languages_1")}</li>
+      <li>{$t("languages_2")}</li>
+      <li>{$t("languages_3")}</li>
     </ul>
   </section>
 </main>
 
 <!-- Add a Print Button -->
 <div class="print-button-container">
-  <button on:click={printResume} class="print-button">Print Resume as PDF</button>
+  <button on:click={printResume} class="print-button">{$t("print_resume")}</button>
 </div>

@@ -18,10 +18,9 @@
 <Footer />
 
 <style>
-  /* Ensure the page occupies at least the full height of the viewport */
   :global(html, body) {
-    height: 100%; /* Ensure body and html span the full viewport height */
-    margin: 0;    /* Reset margin for consistent layout */
+    height: 100%;
+    margin: 0;
   }
 
   main {
