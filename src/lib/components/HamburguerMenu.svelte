@@ -5,7 +5,7 @@
 
   let isOpen = false;
   let isLanguageMenuOpen = false; // Store for the current language
-  let currentLanguage = writable<'en' | 'es'>('en');
+  let currentLanguage = writable<'en' | 'es' | 'de'>('en');
 
   // Toggle the menu
   const toggleMenu = () => {
@@ -19,7 +19,7 @@
   };
 
   // Switch the language
-  const changeLanguage = (lang: 'en' | 'es') => {
+  const changeLanguage = (lang: 'en' | 'es' | 'de') => {
     currentLanguage.set(lang);
     locale.set(lang);
     isLanguageMenuOpen = false;
@@ -34,6 +34,7 @@
   // Register translation files
   register('en', () => import('$lib/lang/en.json'));
   register('es', () => import('$lib/lang/es.json'));
+  register('de', () => import('$lib/lang/de.json'));
 </script>
 
 <style>
@@ -250,26 +251,25 @@
     <span></span>
   </button>
   <div class="logo"><a href="/" on:click={closeMenu}>Whoami_</a></div>
-  <!-- User Icon -->
+
   <div class="user-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
-      <!-- Head (Circle) -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
       <circle cx="12" cy="6" r="4" stroke="white" stroke-width="2" fill="none" />
-      <!-- Body (Simple lines for arms and torso) -->
-      <path d="M12 10 C 10 10, 8 12, 8 15" stroke="white" stroke-width="2" fill="none" /> <!-- Left arm and torso -->
-      <path d="M12 10 C 14 10, 16 12, 16 15" stroke="white" stroke-width="2" fill="none" /> <!-- Right arm and torso -->
-    </svg>
+      <path d="M12 10 C 10 10, 8 12, 8 15" stroke="white" stroke-width="2" fill="none" />
+      <path d="M12 10 C 14 10, 16 12, 16 15" stroke="white" stroke-width="2" fill="none" />
+    </svg> -->
   </div>
 
   <!-- Language Switcher -->
   <div class="language-switcher" on:click={() => { isLanguageMenuOpen = !isLanguageMenuOpen; closeMenu(); }}>
-    <span>{ $currentLanguage === 'en' ? 'EN' : 'ES' }</span>
+    <span>{ $currentLanguage === 'en' ? 'EN' : $currentLanguage === 'es' ? 'ES' : 'DE' }</span>
     <!-- Language Dropdown menu -->
     <div class="language-dropdown {isLanguageMenuOpen ? 'visible' : ''}">
       <button on:click={() => changeLanguage('en')}>English</button>
       <button on:click={() => changeLanguage('es')}>Español</button>
+      <button on:click={() => changeLanguage('de')}>Deutsch</button>
     </div>
-  </div>  
+  </div>
 </div>
 
 <div class="overlay" on:click={closeMenu} style:display={isOpen ? 'block' : 'none'}></div>
