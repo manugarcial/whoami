@@ -40,8 +40,8 @@
 
   .whatsapp-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 120px;
+    right: 40px;
     background-color: #25D366;
     border-radius: 50%;
     padding: 15px;
@@ -68,8 +68,8 @@
       object-fit: cover;
     }
     .whatsapp-button {
-      bottom: 10px;
-      right: 10px;
+      bottom: 20px;
+      right: 20px;
     }
   }
 </style>

@@ -275,6 +275,7 @@
 <div class="overlay" on:click={closeMenu} style:display={isOpen ? 'block' : 'none'}></div>
 <div class={`menu ${isOpen ? 'open' : ''}`}>
   <nav>
+    <li><a href="/about" on:click={closeMenu}>{$t('about_me')}</a></li>
     <li><a href="/resume" on:click={closeMenu}>{$t('resume')}</a></li>
     <li><a href="/career" on:click={closeMenu}>{$t('career_path')}</a></li>
     <li><a href="/projects" on:click={closeMenu}>{$t('projects')}</a></li>

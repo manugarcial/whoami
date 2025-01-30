@@ -29,6 +29,13 @@
   <p>{message}</p> -->
   <div class="card-container">
     <Card 
+      title="{$t('about_me')}"
+      link="/about"
+      bgColor="#AAAF53" 
+      bgImage="/images/portfolio-logo.svg"
+    />
+
+    <Card 
       title="{$t('resume')}"
       link="/resume"
       bgColor="#FFAF53" 
@@ -37,7 +44,7 @@
 
     <Card 
       title="{$t('career_path')}"
-      link="/portfolio"
+      link="/career"
       bgColor="#FFDF53" 
       bgImage="/images/portfolio-logo.svg"
     />
