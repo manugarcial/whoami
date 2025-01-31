@@ -31,7 +31,7 @@
     <Card 
       title="{$t('about_me')}"
       link="/about"
-      bgColor="#AAAF53" 
+      bgColor="#A1153F" 
       bgImage="/images/portfolio-logo.svg"
     />
 
@@ -53,6 +53,13 @@
       title="{$t('projects')}"
       link="/projects"
       bgColor="#A8D58A" 
+      bgImage="/images/github-logo.svg"
+    />
+
+    <Card 
+      title="{$t('infographies')}"
+      link="/tech_infographies"
+      bgColor="#A115A1" 
       bgImage="/images/github-logo.svg"
     />
 

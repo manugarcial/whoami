@@ -1,15 +1,72 @@
 <script lang="ts">
 	import HamburgerMenu from '../lib/components/HamburguerMenu.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import { i18n } from '$lib/i18n';
+	import { i18n, currentLocale } from '$lib/i18n';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import '../app.css';
-	let { children } = $props();
+  import { onMount } from 'svelte';
+  import { goto } from '$app/navigation';
+  import { writable } from 'svelte/store';
+  import { t } from 'svelte-i18n';
 
+	let { children } = $props();
   const whatsappNumber = '34635968035';
+  let showPopup = writable(false);
+  let popupTimeout: ReturnType<typeof setTimeout>; 
+  const validRoutes = ['/', '/projects', '/about', '/blog', '/career', '/resume', '/tech_infographies'];
+  let currentLanguage = writable('en');
+  let pageLink: string;
+
+  currentLocale.subscribe(($currentLocale) => {
+    currentLanguage.set($currentLocale);
+  });
+
+  const getWhatsAppMessage = () => {
+    if (!pageLink) return '';
+    let language = $currentLanguage;
+    let greetingMessage = '';
+
+    switch (language) {
+      case 'es':
+        greetingMessage = `Hola Manuel, encantado de conocerte, contacto contigo desde ${pageLink}`;
+        break;
+      case 'de':
+        greetingMessage = `Hallo Manuel, schön dich kennenzulernen, ich kontaktiere dich von hier aus ${pageLink}`;
+        break;
+      default:
+        greetingMessage = `Hello Manuel, nice to meet you, I am contacting you from ${pageLink}`;
+        break;
+    }
+
+    return encodeURIComponent(greetingMessage);
+  };
+
+  onMount(() => {
+      pageLink = window.location.href;
+      if (!validRoutes.includes(window.location.pathname)) {
+          setTimeout(() => {
+            goto('/');
+          }, 0);
+          showPopup.set(true);
+          popupTimeout = setTimeout(() => showPopup.set(false), 7000);
+      }
+  });
+
+  function closePopup() {
+      showPopup.set(false);
+      clearTimeout(popupTimeout);
+  }
 </script>
 
 <HamburgerMenu />
+
+
+{#if $showPopup}
+    <div class="popup">{currentLanguage}{currentLocale}
+        <span>{$t('redirection_error')}</span>
+        <button onclick={closePopup}>&times;</button>
+    </div>
+{/if}
 
 <main>
   <ParaglideJS {i18n}>
@@ -19,7 +76,7 @@
 
 <Footer />
 
-<a href={`https://wa.me/${whatsappNumber}`} target="_blank" class="whatsapp-button" aria-label="Chat with us on WhatsApp">
+<a href={`https://wa.me/${whatsappNumber}?text=${getWhatsAppMessage()}`} target="_blank" class="whatsapp-button" aria-label="Chat with us on WhatsApp">
   <svg fill="#ffffff" class="whatsapp-icon" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 308 308" xml:space="preserve">
     <g id="XMLID_468_">
       <path id="XMLID_469_" d="M227.904,176.981c-0.6-0.288-23.054-11.345-27.044-12.781c-1.629-0.585-3.374-1.156-5.23-1.156c-3.032,0-5.579,1.511-7.563,4.479c-2.243,3.334-9.033,11.271-11.131,13.642c-0.274,0.313-0.648,0.687-0.872,0.687c-0.201,0-3.676-1.431-4.728-1.888c-24.087-10.463-42.37-35.624-44.877-39.867c-0.358-0.61-0.373-0.887-0.376-0.887c0.088-0.323,0.898-1.135,1.316-1.554c1.223-1.21,2.548-2.805,3.83-4.348c0.607-0.731,1.215-1.463,1.812-2.153c1.86-2.164,2.688-3.844,3.648-5.79l0.503-1.011c2.344-4.657,0.342-8.587-0.305-9.856c-0.531-1.062-10.012-23.944-11.02-26.348c-2.424-5.801-5.627-8.502-10.078-8.502c-0.413,0,0,0-1.732,0.073c-2.109,0.089-13.594,1.601-18.672,4.802c-5.385,3.395-14.495,14.217-14.495,33.249c0,17.129,10.87,33.302,15.537,39.453c0.116,0.155,0.329,0.47,0.638,0.922c17.873,26.102,40.154,45.446,62.741,54.469c21.745,8.686,32.042,9.69,37.896,9.69c0.001,0,0.001,0,0.001,0c2.46,0,4.429-0.193,6.166-0.364l1.102-0.105c7.512-0.666,24.02-9.22,27.775-19.655c2.958-8.219,3.738-17.199,1.77-20.458C233.168,179.508,230.845,178.393,227.904,176.981z"/>
@@ -59,6 +116,30 @@
     width: 50px;
     height: 50px;
     object-fit: cover;
+  }
+
+  .popup {
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f8d7da;
+      color: #721c24;
+      padding: 10px 20px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 400px;
+      width: 90%;
+  }
+  .popup button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: #721c24;
   }
 
   @media (max-width: 768px) {
