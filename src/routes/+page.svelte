@@ -57,7 +57,7 @@
     />
 
     <Card 
-      title="{$t('infographies')}"
+      title="{$t('tech_infographies')}"
       link="/tech_infographies"
       bgColor="#A115A1" 
       bgImage="/images/github-logo.svg"

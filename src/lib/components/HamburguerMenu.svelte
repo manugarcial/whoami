@@ -279,7 +279,7 @@
     <li><a href="/resume" on:click={closeMenu}>{$t('resume')}</a></li>
     <li><a href="/career" on:click={closeMenu}>{$t('career_path')}</a></li>
     <li><a href="/projects" on:click={closeMenu}>{$t('projects')}</a></li>
-    <li><a href="/tech_infographies" on:click={closeMenu}>{$t('infographies')}</a></li>
+    <li><a href="/tech_infographies" on:click={closeMenu}>{$t('tech_infographies')}</a></li>
     <li><a href="/blog" on:click={closeMenu}>{$t('blog')}</a></li>
     <li><a href="https://github.com/manugarcial" on:click={closeMenu}>{$t('github')}</a></li>
     <li><a href="https://linkedin.com/in/manuel-g-a5b879156" on:click={closeMenu}>{$t('linkedin')}</a></li>

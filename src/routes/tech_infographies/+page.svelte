@@ -8,25 +8,45 @@
           projects: [
               {
                   title: "Hema Atelier E-commerce",
-                  reason: "Efficient and fast fashion atelier e-commerce portal.",
-                  tasks: ["Catalog renderization", "Product selection", "Cart management", "Fast checkout"],
+                  reason: "hema_reason",
+                  tasks: ["catalog", "product", "cart", "checkout"],
                   status: "in_development",
                   start: "23/11/2024",
                   end: "on_going",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: [""],
+                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
+                  UX_UI: ["UX/UI wireframes"],
+                  server_side: ["Vercel hosting"],
+                  doc_repo_control: ["Jira", "Github"],
+                  logging: [""],
+                  testing: [""],
+                  other: ["Management comunication: Slack"],
+                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/user/admin-dashboard",
-                  live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  live_url: "https://hema-pro.vercel.app/",
+                  documentation_url: "/projects"
               },
               {
                   title: "Whoami Portfolio",
-                  reason: "Personal portfolio website.",
-                  tasks: ["Resume visualization", "Project exhibition", "Professional development and contact."],
+                  reason: "whoami_reason",
+                  tasks: ["resume_visual", "project_exh", "professional_development"],
                   status: "in_development",
                   start: "20/11/2024",
-                  end: "On going",
+                  end: "on_going",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: [""],
+                  analytics: [""],
+                  UX_UI: [""],
+                  server_side: ["Vercel hosting"],
+                  doc_repo_control: ["Github"],
+                  logging: [""],
+                  testing: [""],
+                  other: [""],
+                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/user/admin-dashboard",
-                  live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  live_url: "https://whoami-dusky-six.vercel.app/",
+                  documentation_url: "/projects"
               }
           ]
       },
@@ -37,14 +57,24 @@
           projects: [
               {
                   title: "Financapp",
-                  reason: "Personal finances application. Salary and mortgage calculator. Stock market investments tracking.",
-                  tasks: ["Data visualization", "User authentication", "API integrations", "Different economic calculations"],
+                  reason: "financapp_reason_fe",
+                  tasks: ["data", "user_auth", "API", "economic_calc"],
                   status: "on_hold",
                   start: "01/10/2024",
-                  end: "On going",
+                  end: "on_going",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["PostgreSQL"],
+                  analytics: [""],
+                  UX_UI: ["UX/UI wireframes"],
+                  server_side: ["Vercel hosting"],
+                  doc_repo_control: ["Github"],
+                  logging: [""],
+                  testing: [""],
+                  other: [""],
+                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/user/admin-dashboard",
                   live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  documentation_url: "/projects"
               }
           ]
       },
@@ -55,14 +85,21 @@
           projects: [
               {
                   title: "Exodus",
-                  reason: "Frontend data visualization for user living standards studies and migration puposes.",
-                  tasks: ["Data visualization", "Living metrics calculation", "API integrations"],
+                  reason: "exodus_reason_fe",
+                  tasks: ["data", "living_metrics", "API"],
                   status: "finished",
                   start: "01/03/2019",
                   end: "08/06/2019",
-                  repo: "https://github.com/user/admin-dashboard",
-                  live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["MongoDB"],
+                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
+                  UX_UI: ["UX/UI wireframes", "Just In Mind"],
+                  server_side: ["UOC hosting"],
+                  doc_repo_control: ["Github"],
+                  logging: [""],
+                  testing: ["Cypress"],
+                  other: ["Management comunication: UOC Intranet"],
+                  // -----------------------------------------------------------------------------------------
               }
           ]
       },
@@ -73,37 +110,86 @@
           projects: [
               {
                   title: "Coosto's website",
-                  reason: "Company's public website used for marketing and sales purposes.",
-                  tasks: ["User data tracking", "User management", "Marketing campaigns"],
+                  reason: "coosto_reason",
+                  tasks: ["user_data", "user_management", "market_campaigns"],
                   status: "finished",
                   start: "20/07/2020",
-                  end: "31/01/2024"
+                  end: "31/01/2024",
+                  live_url: "https://www.coosto.com/en",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["MySQL"],
+                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
+                  UX_UI: ["Figma", "InVision", "Abode Photoshop", "Adobe Illustrator"],
+                  server_side: ["Private hosting", "Local Datacenter", "Amazon Web Services (AWS)"],
+                  doc_repo_control: ["Jira", "Bibucket"],
+                  logging: [""],
+                  testing: [""],
+                  other: ["Management comunication: Mattermost"],
+                  // -----------------------------------------------------------------------------------------
               }
           ]
       },
       {
           category: "Backend",
-          name: "Python",
+          name: "Python (Flask)",
           version: "v3.7.3 & 3.12.6",
           projects: [
               {
                   title: "Financapp",
-                  reason: "Backend data calculations and API management from Real time data sources and historical sources (Finhub and Yahoo finance).",
-                  tasks: ["User authentication", "Live notifications", "RESTful API endpoints"],
+                  reason: "financapp_reason_be",
+                  tasks: ["user_auth", "live_not", "API_end"],
                   status: "on_hold",
                   start: "01/10/2024",
-                  end: "on_going",
+                  end: "on_going",                  
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["PostgreSQL"],
+                  analytics: [""],
+                  UX_UI: ["UX/UI wireframes"],
+                  server_side: ["Render hosting"],
+                  doc_repo_control: ["Github"],
+                  logging: [""],
+                  testing: [""],
+                  other: [""],
+                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/user/social-media-api",
                   live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  documentation_url: "/projects"
               },
               {
                   title: "Exodus",
-                  reason: "Backend data calculations for user living standards studies and migration puposes.",
-                  tasks: ["Data collection (source numbeo)", "Currency change", "RESTful API endpoints"],
+                  reason: "exodus_reason_be",
+                  tasks: ["data_collection", "currency", "API_end"],
                   status: "finished",
                   start: "01/03/2019",
                   end: "08/06/2019",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["MongoDB"],
+                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
+                  UX_UI: ["UX/UI wireframes", "Just In Mind"],
+                  server_side: ["UOC hosting"],
+                  doc_repo_control: ["Github"],
+                  logging: [""],
+                  testing: ["Cypress"],
+                  other: ["Management comunication: UOC Intranet"],
+                  // -----------------------------------------------------------------------------------------
+              },
+              {
+                  title: "Poetry AI Generator with Machine Learning",
+                  reason: "poetry_ai_gen_reason",
+                  tasks: ["data_collection", "data_gen", "API_end", "mach_learn", "neural_net"],
+                  status: "finished",
+                  start: "01/02/2018",
+                  end: "10/06/2018",
+                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
+                  databases: ["MongoDB"],
+                  analytics: [""],
+                  UX_UI: ["UX/UI wireframes"],
+                  server_side: ["Local hosting"],
+                  doc_repo_control: ["Redmine", "Gitlab"],
+                  logging: [""],
+                  testing: [""],
+                  other: ["Management comunication: UJA Intranet"],
+                  // -----------------------------------------------------------------------------------------
               }
           ]
       }
@@ -144,9 +230,13 @@
                     <p><strong>{$t("tech_infographies_status")}</strong> {$t(project.status)}</p>
                     <p><strong>{$t("tech_infographies_start")}</strong> {$t(project.start)}</p>
                     <p><strong>{$t("tech_infographies_end")}</strong> {$t(project.end)}</p>
-                    {#if project.repo}
+                    {#if project.repo || project.live_url || project.documentation_url}
                       <div class="project-buttons">
-                        <a href="{project.repo}" target="_blank" class="project-btn repo-btn">{$t("tech_infographies_repo")}</a>
+                        {#if project.repo}
+                            <a href="{project.repo}" target="_blank" class="project-btn repo-btn">{$t("tech_infographies_repo")}</a>
+                        {:else}
+                            <div class="protected-data project-btn">{$t("tech_infographies_protected_data")}</div>
+                        {/if}
                         {#if project.live_url}
                             <a href="{project.live_url}" target="_blank" class="project-btn live-btn">{$t("tech_infographies_live")}</a>
                         {/if}
@@ -155,7 +245,7 @@
                         {/if}
                       </div>
                     {:else}
-                      <div class="protected-data project-buttons project-btn">{$t("tech_infographies_protected_data")}</div>
+                      <div class="protected-data project-btn">{$t("tech_infographies_protected_data")}</div>
                     {/if}
                 </div>
             {/each}
@@ -166,8 +256,8 @@
 </div>
 
 <div class="cta-container">
-  <a href="https://github.com/manugarcial" target="_blank" class="github-link">{$t("tech_infographies_github")}Visit My GitHub</a>
-  <a href="/projects" class="projects-link">{$t("tech_infographies_projects")}See My Projects</a>
+  <a href="https://github.com/manugarcial" target="_blank" class="github-link">{$t("tech_infographies_github")}</a>
+  <a href="/projects" class="projects-link">{$t("tech_infographies_projects")}</a>
 </div>
 
 <style>
@@ -183,7 +273,6 @@
       color: #333;
   }
   .tech-category {
-      margin-bottom: 40px;
       background: #f8f9fa;
       padding: 20px;
       border-radius: 10px;
