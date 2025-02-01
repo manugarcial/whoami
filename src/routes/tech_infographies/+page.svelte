@@ -1,22 +1,29 @@
 <script>
+  import { t } from 'svelte-i18n';
   let technologies = [
       {
           category: "Frontend",
           name: "Svelte",
-          version: "v3.0",
+          version: "v5.19.5",
           projects: [
               {
                   title: "Hema Atelier E-commerce",
-                  reason: "Efficient state management and component-based architecture.",
-                  tasks: ["Data visualization", "User authentication", "API integrations"],
+                  reason: "Efficient and fast fashion atelier e-commerce portal.",
+                  tasks: ["Catalog renderization", "Product selection", "Cart management", "Fast checkout"],
+                  status: "in_development",
+                  start: "23/11/2024",
+                  end: "on_going",
                   repo: "https://github.com/user/admin-dashboard",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "https://docs.admin-dashboard.com"
               },
               {
                   title: "Whoami Portfolio",
-                  reason: "Efficient state management and component-based architecture.",
-                  tasks: ["Data visualization", "User authentication", "API integrations"],
+                  reason: "Personal portfolio website.",
+                  tasks: ["Resume visualization", "Project exhibition", "Professional development and contact."],
+                  status: "in_development",
+                  start: "20/11/2024",
+                  end: "On going",
                   repo: "https://github.com/user/admin-dashboard",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "https://docs.admin-dashboard.com"
@@ -26,12 +33,15 @@
       {
           category: "Frontend",
           name: "Vue.js",
-          version: "v3.0",
+          version: "v3.5.12",
           projects: [
               {
                   title: "Financapp",
-                  reason: "Efficient state management and component-based architecture.",
-                  tasks: ["Data visualization", "User authentication", "API integrations"],
+                  reason: "Personal finances application. Salary and mortgage calculator. Stock market investments tracking.",
+                  tasks: ["Data visualization", "User authentication", "API integrations", "Different economic calculations"],
+                  status: "on_hold",
+                  start: "01/10/2024",
+                  end: "On going",
                   repo: "https://github.com/user/admin-dashboard",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "https://docs.admin-dashboard.com"
@@ -41,12 +51,15 @@
       {
           category: "Frontend",
           name: "AngularJS",
-          version: "v3.0",
+          version: "v9.0",
           projects: [
               {
-                  title: "Admin Dashboard",
-                  reason: "Efficient state management and component-based architecture.",
-                  tasks: ["Data visualization", "User authentication", "API integrations"],
+                  title: "Exodus",
+                  reason: "Frontend data visualization for user living standards studies and migration puposes.",
+                  tasks: ["Data visualization", "Living metrics calculation", "API integrations"],
+                  status: "finished",
+                  start: "01/03/2019",
+                  end: "08/06/2019",
                   repo: "https://github.com/user/admin-dashboard",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "https://docs.admin-dashboard.com"
@@ -56,37 +69,48 @@
       {
           category: "CMS",
           name: "Drupal",
-          version: "v3.0",
+          version: "v8.0, 9.0 & 10.0",
           projects: [
               {
-                  title: "Admin Dashboard",
-                  reason: "Efficient state management and component-based architecture.",
-                  tasks: ["Data visualization", "User authentication", "API integrations"],
-                  repo: "https://github.com/user/admin-dashboard",
-                  live_url: "https://admin-dashboard.com",
-                  documentation_url: "https://docs.admin-dashboard.com"
+                  title: "Coosto's website",
+                  reason: "Company's public website used for marketing and sales purposes.",
+                  tasks: ["User data tracking", "User management", "Marketing campaigns"],
+                  status: "finished",
+                  start: "20/07/2020",
+                  end: "31/01/2024"
               }
           ]
       },
       {
           category: "Backend",
           name: "Python",
-          version: "v3.0",
+          version: "v3.7.3 & 3.12.6",
           projects: [
               {
-                  title: "API for a Social Media App",
-                  reason: "Handles real-time data and scalable backend processing.",
+                  title: "Financapp",
+                  reason: "Backend data calculations and API management from Real time data sources and historical sources (Finhub and Yahoo finance).",
                   tasks: ["User authentication", "Live notifications", "RESTful API endpoints"],
+                  status: "on_hold",
+                  start: "01/10/2024",
+                  end: "on_going",
                   repo: "https://github.com/user/social-media-api",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "https://docs.admin-dashboard.com"
+              },
+              {
+                  title: "Exodus",
+                  reason: "Backend data calculations for user living standards studies and migration puposes.",
+                  tasks: ["Data collection (source numbeo)", "Currency change", "RESTful API endpoints"],
+                  status: "finished",
+                  start: "01/03/2019",
+                  end: "08/06/2019",
               }
           ]
       }
   ];
 
   function getColor(index) {
-      const colors = ["#007bff", "#28a745", "#dc3545", "#ffc107", "#17a2b8", "#6f42c1", "#fd7e14", "#20c997", "#e83e8c", "#343a40"];
+      const colors = ["#20c997", "#fd7e14", "#007bff", "#28a745", "#dc3545", "#ffc107", "#6f42c1", "#17a2b8", "#e83e8c", "#343a40"];
       return colors[index % colors.length];
   }
 
@@ -98,6 +122,53 @@
       groupedTechnologies[tech.category].push(tech);
   });
 </script>
+
+<div class="container">
+  <h1 class="title">{$t("tech_infographies")}</h1>
+  {#each Object.keys(groupedTechnologies) as category}
+    <div class="tech-category">
+      <h2 class="category-title">{category}</h2>
+      {#each groupedTechnologies[category] as tech}
+        <div class="tech-card">
+            <h2>{tech.name} <span class="tech-version">{tech.version}</h2>
+            {#each tech.projects as project, i}
+                <div class="project" style="border-left-color: {getColor(i)}">
+                    <h3><strong>{project.title}</strong></h3>
+                    <p><strong>{$t("tech_infographies_why")}</strong> {$t(project.reason)}</p>
+                    <p><strong>{$t("tech_infographies_main")}</strong></p>
+                    <ul>
+                        {#each project.tasks as task}
+                            <li>{$t(task)}</li>
+                        {/each}
+                    </ul>
+                    <p><strong>{$t("tech_infographies_status")}</strong> {$t(project.status)}</p>
+                    <p><strong>{$t("tech_infographies_start")}</strong> {$t(project.start)}</p>
+                    <p><strong>{$t("tech_infographies_end")}</strong> {$t(project.end)}</p>
+                    {#if project.repo}
+                      <div class="project-buttons">
+                        <a href="{project.repo}" target="_blank" class="project-btn repo-btn">{$t("tech_infographies_repo")}</a>
+                        {#if project.live_url}
+                            <a href="{project.live_url}" target="_blank" class="project-btn live-btn">{$t("tech_infographies_live")}</a>
+                        {/if}
+                        {#if project.documentation_url}
+                            <a href="{project.documentation_url}" target="_blank" class="project-btn doc-btn">{$t("tech_infographies_docs")}</a>
+                        {/if}
+                      </div>
+                    {:else}
+                      <div class="protected-data project-buttons project-btn">{$t("tech_infographies_protected_data")}</div>
+                    {/if}
+                </div>
+            {/each}
+        </div>
+      {/each}
+    </div>
+  {/each}
+</div>
+
+<div class="cta-container">
+  <a href="https://github.com/manugarcial" target="_blank" class="github-link">{$t("tech_infographies_github")}Visit My GitHub</a>
+  <a href="/projects" class="projects-link">{$t("tech_infographies_projects")}See My Projects</a>
+</div>
 
 <style>
   .container {
@@ -146,11 +217,10 @@
   .project h3 {
       margin: 5px 0;
   }
-  .project a {
+  .project a, .project .protected-data {
       display: inline-block;
       margin-top: 5px;
       padding: 5px 10px;
-      background: #008cff;
       color: white;
       text-decoration: none;
       border-radius: 4px;
@@ -159,30 +229,40 @@
   .project a:hover {
       background: #0056b3;
   }
-  /* Buttons Container */
+
+  .project .protected-data {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 5px 10px;
+      background: #000000;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+  }
+  .project .protected-data:hover {
+      background: #000000;
+  }
   .project-buttons {
       margin-top: 20px;
       display: flex;
       gap: 10px;
   }
-  /* View Repository Button */
-  .project-btn {
-      background: #007bff;
+  .repo-btn {
+      background: #1349ac;
   }
-  .project-btn:hover {
-      background: #0056b3;
+
+  .repo-btn:hover {
+      background: #17007a;
   }
-  /* View Live Button */
   .live-btn {
       background: #28a745;
   }
   .live-btn:hover {
       background: #218838;
   }
-
-  /* View Documentation Button */
   .doc-btn {
-      background: #ffc107;
+      background: #ff9c07;
   }
   .doc-btn:hover {
       background: #e0a800;
@@ -213,52 +293,17 @@
       background: #007bff;
   }
   @media (max-width: 600px) {
-      .cta-container {
-          flex-direction: column;
-          max-width: 100%;
-      }
-      .cta-container a {
-          max-width: 100%;
-      }
+    .cta-container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .cta-container a {
+        max-width: 100%;
+    }
+    .project-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
   }
 </style>
-
-<div class="container">
-  <h1 class="title">Technologies Infographics</h1>
-  {#each Object.keys(groupedTechnologies) as category}
-    <div class="tech-category">
-      <h2 class="category-title">{category}</h2>
-      {#each groupedTechnologies[category] as tech}
-        <div class="tech-card">
-            <h2>{tech.name} <span class="tech-version">{tech.version}</h2>
-            {#each tech.projects as project, i}
-                <div class="project" style="border-left-color: {getColor(i)}">
-                    <h3>{project.title}</h3>
-                    <p><strong>Why?</strong> {project.reason}</p>
-                    <p><strong>Main Tasks:</strong></p>
-                    <ul>
-                        {#each project.tasks as task}
-                            <li>{task}</li>
-                        {/each}
-                    </ul>
-                    <div class="project-buttons">
-                      <a href="{project.repo}" target="_blank" class="project-btn">View Repository</a>
-                      {#if project.live_url}
-                          <a href="{project.live_url}" target="_blank" class="project-btn live-btn">View Live</a>
-                      {/if}
-                      {#if project.documentation_url}
-                          <a href="{project.documentation_url}" target="_blank" class="project-btn doc-btn">View Documentation</a>
-                      {/if}
-                  </div>
-                </div>
-            {/each}
-        </div>
-      {/each}
-    </div>
-  {/each}
-</div>
-
-<div class="cta-container">
-  <a href="https://github.com/user" target="_blank" class="github-link">Visit My GitHub</a>
-  <a href="/projects" class="projects-link">See My Projects</a>
-</div>

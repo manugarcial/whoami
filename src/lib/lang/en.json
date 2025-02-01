@@ -108,5 +108,19 @@
   "about_passion": "Passionate and detail-oriented Full-Stack Developer with expertise in front-end and back-end technologies, including JavaScript, Vue3, Python, Node.js, and databases like MongoDB and PostgreSQL. Adept at designing scalable web applications, optimizing user experience, and implementing efficient backend solutions.",
   "about_experience": "Proven ability to develop and maintain high-quality applications, collaborating with cross-functional teams to deliver seamless digital experiences.",
   "about_goals": "Looking to leverage my technical skills and problem-solving abilities to contribute to innovative projects, while continuously learning and evolving within the tech industry. My long-term goal is to lead a development team in creating impactful software solutions.",
-  "redirection_error": "You have been redirected because the previous URL did not exist."
+  "redirection_error": "You have been redirected because the previous URL did not exist.",
+  "on_going": "On going",
+  "on_hold": "On hold",
+  "in_development": "In development",
+  "finished": "Finished",
+  "tech_infographies": "Technologies Infographics",
+  "tech_infographies_why": "Why?",
+  "tech_infographies_main": "Main tasks:",
+  "tech_infographies_status": "Status",
+  "tech_infographies_start": "Start date: ",
+  "tech_infographies_end": "End date: ",
+  "tech_infographies_repo": "View Repository",
+  "tech_infographies_live": "View Live",
+  "tech_infographies_docs": "View Documentation",
+  "tech_infographies_protected_data": "Protected data"
 }

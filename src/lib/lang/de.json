@@ -108,5 +108,19 @@
   "about_passion": "Leidenschaftlicher und detailorientierter Full-Stack-Entwickler mit Fachwissen in Front-End- und Back-End-Technologien, einschließlich JavaScript, Vue3, Python, Node.js und Datenbanken wie MongoDB und PostgreSQL. Versiert darin, skalierbare Webanwendungen zu entwerfen, die Benutzererfahrung zu optimieren und effiziente Backend-Lösungen zu implementieren.",
   "about_experience": "Nachgewiesene Fähigkeit, hochwertige Anwendungen zu entwickeln und zu warten und mit funktionsübergreifenden Teams zusammenzuarbeiten, um nahtlose digitale Erlebnisse zu liefern.",
   "about_goals": "Ich möchte meine technischen Fähigkeiten und Problemlösungsfähigkeiten nutzen, um zu innovativen Projekten beizutragen und gleichzeitig in der Technologiebranche kontinuierlich zu lernen und mich weiterzuentwickeln. Mein langfristiges Ziel ist es, ein Entwicklungsteam bei der Entwicklung wirkungsvoller Softwarelösungen zu leiten.",
-  "redirection_error": "You have been redirected because the previous URL did not exist. DE"
+  "redirection_error": "You have been redirected because the previous URL did not exist. DE",
+  "on_going": "Im gange",
+  "on_hold": "In der Warteschleife",
+  "in_development": "In Entwicklung",
+  "finished": "Beendet",
+  "tech_infographies": "Technologie-Infotografien",
+  "tech_infographies_why": "Warum?",
+  "tech_infographies_main": "Hauptaufgaben:",
+  "tech_infographies_status": "Status",
+  "tech_infographies_start": "Startdatum: ",
+  "tech_infographies_end": "Enddatum: ",
+  "tech_infographies_repo": "Repository anzeigen",
+  "tech_infographies_live": "Live anzeigen",
+  "tech_infographies_docs": "Dokumentation anzeigen",
+  "tech_infographies_protected_data": "Geschützte Daten"
 }

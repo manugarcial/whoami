@@ -108,5 +108,19 @@
   "about_passion": "Desarrollador Full-Stack apasionado y orientado a los detalles con experiencia en tecnologías front-end y back-end, incluidas JavaScript, Vue3, Python, Node.js y bases de datos como MongoDB y PostgreSQL. Experto en diseñar aplicaciones web escalables, optimizar la experiencia del usuario e implementar soluciones backend eficientes.",
   "about_experience": "Capacidad comprobada para desarrollar y mantener aplicaciones de alta calidad, colaborando con equipos multifuncionales para ofrecer experiencias digitales perfectas.",
   "about_goals": "Busco aprovechar mis habilidades técnicas y de resolución de problemas para contribuir a proyectos innovadores, mientras aprendo y evoluciono continuamente dentro de la industria tecnológica. Mi objetivo a largo plazo es liderar un equipo de desarrollo en la creación de soluciones de software impactantes.",
-  "redirection_error": "Ha sido redirigido ya que la página anterior no existe."
+  "redirection_error": "Ha sido redirigido ya que la página anterior no existe.",
+  "on_going": "En curso",  
+  "on_hold": "En pausa",
+  "in_development": "En desarrollo",
+  "finished": "Finalizado",
+  "tech_infographies": "Infografías tecnológicas",
+  "tech_infographies_why": "Por qué?",
+  "tech_infographies_main": "Tareas principales:",
+  "tech_infographies_status": "Estado",
+  "tech_infographies_start": "Fecha de inicio: ",
+  "tech_infographies_end": "Fecha fin: ",
+  "tech_infographies_repo": "Visitar repositorio",
+  "tech_infographies_live": "Ver en vivo",
+  "tech_infographies_docs": "Ver documentación",
+  "tech_infographies_protected_data": "Proyecto privado"
 }
