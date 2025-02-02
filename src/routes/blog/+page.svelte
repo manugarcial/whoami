@@ -13,12 +13,6 @@
     //   summary: "Discover best practices for creating reusable components in Svelte.",
     //   date: "2024-11-19",
     // },
-    // {
-    //   id: "3",
-    //   title: "Introduction to Server-Side Rendering (SSR)",
-    //   summary: "Understand SSR and how SvelteKit leverages it for better performance.",
-    //   date: "2024-11-18",
-    // },
   ];
 </script>
 

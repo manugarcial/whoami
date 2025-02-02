@@ -1,10 +1,44 @@
 <script>
   import Card from '../../lib/components/Card.svelte';
+  export let projects = [
+    {
+      id: "financapp",
+      title: "Financapp",
+      summary: "test project docs",
+      link: "/projects/financapp",
+      bgColor: "#A8D58A",
+      bgImage: "/images/finances.svg"
+    },
+    {
+      id: "whoami",
+      title: "Whoami",
+      summary: "test project docs",
+      link: "/projects/whoami",
+      bgColor: "#C7DF5F",
+      bgImage: "/images/employee.svg"
+    },
+    {
+      id: "hema",
+      title: "Hema",
+      summary: "test project docs",
+      link: "/projects/hema",
+      bgColor: "#A1BFF7",
+      bgImage: "/images/hema-sewing.svg"
+    },
+    // {
+    //   id: "HemaBackoffice",
+    //   title: "Hema Backoffice",
+    //   summary: "test project docs",
+    //   link: "/projects/hema_backoffice",
+    //   bgColor: "#F4A261",
+    //   bgImage: "/images/default.svg"
+    // },
+  ];
 </script>
 
 <main>
   <div class="card-container">
-    <Card 
+    <!-- <Card 
       title="Financapp"
       link="https://github.com/manugarcial/my-finances"
       bgColor="#A8D58A"
@@ -23,14 +57,16 @@
       link="https://github.com/manugarcial/Hema"
       bgColor="#A1BFF7"
       bgImage="/images/hema-sewing.svg"
-    />
-
-    <!-- <Card 
-      title="Hema Backoffice (To be started)"
-      link="https://github.com/manugarcial"
-      bgColor="#A1DFF7"
-      bgImage="/images/hema-sewing.svg"
     /> -->
+
+    {#each projects as project}
+      <Card 
+        title={project.title}
+        link={project.link}
+        bgColor={project.bgColor}
+        bgImage={project.bgImage}
+      />
+      {/each}
   </div>
 </main>
 
@@ -43,14 +79,13 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
-    gap: 20px; /* Space between cards */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  /* Optionally, you can adjust the responsiveness of the layout */
   @media (max-width: 768px) {
     .card-container {
-      grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+      grid-template-columns: 1fr;
     }
   }
 </style>
