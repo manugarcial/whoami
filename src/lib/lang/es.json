@@ -150,5 +150,9 @@
   "data_collection": "Data collection (source numbeo)",
   "currency": "Currency change",
   "tech_infographies_github": "Visit my GitHub",
-  "tech_infographies_projects": "Take a look to my projects"
+  "tech_infographies_projects": "Take a look to my projects",
+  "poetry_ai_gen_reason": "Generador de poesía mediante IA basada en redes neuronales",
+  "data_gen": "Generación de datos",
+  "mach_learn": "Aprendizaje computacional",
+  "neural_net": "Redes neuronales"
 }

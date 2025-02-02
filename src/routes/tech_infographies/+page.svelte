@@ -23,7 +23,7 @@
                   testing: [""],
                   other: ["Management comunication: Slack"],
                   // -----------------------------------------------------------------------------------------
-                  repo: "https://github.com/user/admin-dashboard",
+                  repo: "https://github.com/manugarcial/Hema",
                   live_url: "https://hema-pro.vercel.app/",
                   documentation_url: "/projects"
               },
@@ -44,7 +44,7 @@
                   testing: [""],
                   other: [""],
                   // -----------------------------------------------------------------------------------------
-                  repo: "https://github.com/user/admin-dashboard",
+                  repo: "https://github.com/manugarcial/whoami",
                   live_url: "https://whoami-dusky-six.vercel.app/",
                   documentation_url: "/projects"
               }
@@ -72,7 +72,7 @@
                   testing: [""],
                   other: [""],
                   // -----------------------------------------------------------------------------------------
-                  repo: "https://github.com/user/admin-dashboard",
+                  repo: "https://github.com/manugarcial/my-finances/tree/main/financapp-front",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "/projects"
               }
@@ -151,8 +151,8 @@
                   testing: [""],
                   other: [""],
                   // -----------------------------------------------------------------------------------------
-                  repo: "https://github.com/user/social-media-api",
-                  live_url: "https://admin-dashboard.com",
+                  repo: "https://github.com/manugarcial/my-finances/tree/main/financapp",
+                  live_url: "https://my-finances-nu.vercel.app/",
                   documentation_url: "/projects"
               },
               {
@@ -314,9 +314,6 @@
       text-decoration: none;
       border-radius: 4px;
       font-size: 14px;
-  }
-  .project a:hover {
-      background: #0056b3;
   }
 
   .project .protected-data {

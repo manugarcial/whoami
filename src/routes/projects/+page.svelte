@@ -25,12 +25,12 @@
       bgImage="/images/hema-sewing.svg"
     />
 
-    <Card 
-      title="iTrack (To be started)"
+    <!-- <Card 
+      title="Hema Backoffice (To be started)"
       link="https://github.com/manugarcial"
       bgColor="#A1DFF7"
-      bgImage="/images/notes.svg"
-    />
+      bgImage="/images/hema-sewing.svg"
+    /> -->
   </div>
 </main>
 
