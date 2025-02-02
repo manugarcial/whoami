@@ -154,5 +154,6 @@
   "poetry_ai_gen_reason": "Poetry AI generator based on neural networks",
   "data_gen": "Data generation",
   "mach_learn": "Machine learning",
-  "neural_net": "Neural networks"
+  "neural_net": "Neural networks",
+  "search_placeholder": "Search"
 }

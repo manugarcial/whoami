@@ -13,16 +13,6 @@
                   status: "in_development",
                   start: "23/11/2024",
                   end: "on_going",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: [""],
-                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
-                  UX_UI: ["UX/UI wireframes"],
-                  server_side: ["Vercel hosting"],
-                  doc_repo_control: ["Jira", "Github"],
-                  logging: [""],
-                  testing: [""],
-                  other: ["Management comunication: Slack"],
-                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/manugarcial/Hema",
                   live_url: "https://hema-pro.vercel.app/",
                   documentation_url: "/projects"
@@ -34,16 +24,6 @@
                   status: "in_development",
                   start: "20/11/2024",
                   end: "on_going",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: [""],
-                  analytics: [""],
-                  UX_UI: [""],
-                  server_side: ["Vercel hosting"],
-                  doc_repo_control: ["Github"],
-                  logging: [""],
-                  testing: [""],
-                  other: [""],
-                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/manugarcial/whoami",
                   live_url: "https://whoami-dusky-six.vercel.app/",
                   documentation_url: "/projects"
@@ -56,22 +36,12 @@
           version: "v3.5.12",
           projects: [
               {
-                  title: "Financapp",
+                  title: "Financapp FE",
                   reason: "financapp_reason_fe",
                   tasks: ["data", "user_auth", "API", "economic_calc"],
                   status: "on_hold",
                   start: "01/10/2024",
                   end: "on_going",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["PostgreSQL"],
-                  analytics: [""],
-                  UX_UI: ["UX/UI wireframes"],
-                  server_side: ["Vercel hosting"],
-                  doc_repo_control: ["Github"],
-                  logging: [""],
-                  testing: [""],
-                  other: [""],
-                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/manugarcial/my-finances/tree/main/financapp-front",
                   live_url: "https://admin-dashboard.com",
                   documentation_url: "/projects"
@@ -84,22 +54,12 @@
           version: "v9.0",
           projects: [
               {
-                  title: "Exodus",
+                  title: "Exodus FE",
                   reason: "exodus_reason_fe",
                   tasks: ["data", "living_metrics", "API"],
                   status: "finished",
                   start: "01/03/2019",
                   end: "08/06/2019",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["MongoDB"],
-                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
-                  UX_UI: ["UX/UI wireframes", "Just In Mind"],
-                  server_side: ["UOC hosting"],
-                  doc_repo_control: ["Github"],
-                  logging: [""],
-                  testing: ["Cypress"],
-                  other: ["Management comunication: UOC Intranet"],
-                  // -----------------------------------------------------------------------------------------
               }
           ]
       },
@@ -116,16 +76,6 @@
                   start: "20/07/2020",
                   end: "31/01/2024",
                   live_url: "https://www.coosto.com/en",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["MySQL"],
-                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
-                  UX_UI: ["Figma", "InVision", "Abode Photoshop", "Adobe Illustrator"],
-                  server_side: ["Private hosting", "Local Datacenter", "Amazon Web Services (AWS)"],
-                  doc_repo_control: ["Jira", "Bibucket"],
-                  logging: [""],
-                  testing: [""],
-                  other: ["Management comunication: Mattermost"],
-                  // -----------------------------------------------------------------------------------------
               }
           ]
       },
@@ -135,43 +85,23 @@
           version: "v3.7.3 & 3.12.6",
           projects: [
               {
-                  title: "Financapp",
+                  title: "Financapp BE",
                   reason: "financapp_reason_be",
                   tasks: ["user_auth", "live_not", "API_end"],
                   status: "on_hold",
                   start: "01/10/2024",
                   end: "on_going",                  
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["PostgreSQL"],
-                  analytics: [""],
-                  UX_UI: ["UX/UI wireframes"],
-                  server_side: ["Render hosting"],
-                  doc_repo_control: ["Github"],
-                  logging: [""],
-                  testing: [""],
-                  other: [""],
-                  // -----------------------------------------------------------------------------------------
                   repo: "https://github.com/manugarcial/my-finances/tree/main/financapp",
                   live_url: "https://my-finances-nu.vercel.app/",
                   documentation_url: "/projects"
               },
               {
-                  title: "Exodus",
+                  title: "Exodus BE",
                   reason: "exodus_reason_be",
                   tasks: ["data_collection", "currency", "API_end"],
                   status: "finished",
                   start: "01/03/2019",
                   end: "08/06/2019",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["MongoDB"],
-                  analytics: ["Google Tag Manager (GTM)", "Google Analytics (GA4)"],
-                  UX_UI: ["UX/UI wireframes", "Just In Mind"],
-                  server_side: ["UOC hosting"],
-                  doc_repo_control: ["Github"],
-                  logging: [""],
-                  testing: ["Cypress"],
-                  other: ["Management comunication: UOC Intranet"],
-                  // -----------------------------------------------------------------------------------------
               },
               {
                   title: "Poetry AI Generator with Machine Learning",
@@ -180,16 +110,6 @@
                   status: "finished",
                   start: "01/02/2018",
                   end: "10/06/2018",
-                  // Esto va a la pagina individual de proyecto. Emborrona mucho la informacion en esta página
-                  databases: ["MongoDB"],
-                  analytics: [""],
-                  UX_UI: ["UX/UI wireframes"],
-                  server_side: ["Local hosting"],
-                  doc_repo_control: ["Redmine", "Gitlab"],
-                  logging: [""],
-                  testing: [""],
-                  other: ["Management comunication: UJA Intranet"],
-                  // -----------------------------------------------------------------------------------------
               }
           ]
       }
@@ -213,13 +133,13 @@
   <h1 class="title">{$t("tech_infographies")}</h1>
   {#each Object.keys(groupedTechnologies) as category}
     <div class="tech-category">
-      <h2 class="category-title">{category}</h2>
+      <h2 class="category-title"  id={`${category}`}>{category}</h2>
       {#each groupedTechnologies[category] as tech}
         <div class="tech-card">
-            <h2>{tech.name} <span class="tech-version">{tech.version}</h2>
+            <h2 id={`${tech.name}`}>{tech.name} <span class="tech-version">{tech.version}</h2>
             {#each tech.projects as project, i}
                 <div class="project" style="border-left-color: {getColor(i)}">
-                    <h3><strong>{project.title}</strong></h3>
+                    <h3 id={`${project.title}`}><strong>{project.title}</strong></h3>
                     <p><strong>{$t("tech_infographies_why")}</strong> {$t(project.reason)}</p>
                     <p><strong>{$t("tech_infographies_main")}</strong></p>
                     <ul>

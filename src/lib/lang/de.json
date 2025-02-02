@@ -154,5 +154,6 @@
   "poetry_ai_gen_reason": "Auf neuronalen Netzen basierender KI-Generator für Gedichte",
   "data_gen": "Datengenerierung",
   "mach_learn": "Computergestütztes Lernen",
-  "neural_net": "Neuronale Netzwerke"
+  "neural_net": "Neuronale Netzwerke",
+  "search_placeholder": "Suchen"
 }

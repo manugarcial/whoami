@@ -5,7 +5,45 @@
 
   let isOpen = false;
   let isLanguageMenuOpen = false; // Store for the current language
+  let searchQuery = "";
   let currentLanguage = writable<'en' | 'es' | 'de'>('en');
+
+  const menuItems = [
+    { title: 'about_me', path: '/about' },
+    { title: 'resume', path: '/resume' },
+    { title: 'career_path', path: '/career' },
+    { title: 'projects', path: '/projects' },
+    { title: 'tech_infographies', path: '/tech_infographies' },
+    { title: 'blog', path: '/blog' },
+    { title: 'github', path: 'https://github.com/manugarcial' },
+    { title: 'linkedin', path: 'https://linkedin.com/in/manuel-g-a5b879156' },
+  ];
+
+  const queryItems = [
+    { title: 'about_me', path: '/about' },
+    { title: 'resume', path: '/resume' },
+    { title: 'career_path', path: '/career' },
+    { title: 'projects', path: '/projects' },
+    { title: 'tech_infographies', path: '/tech_infographies' },
+    { title: 'blog', path: '/blog' },
+    { title: 'github', path: 'https://github.com/manugarcial' },
+    { title: 'linkedin', path: 'https://linkedin.com/in/manuel-g-a5b879156' },
+    { title: 'JavaScript', path: '/career#tech_skills' },
+    { title: 'TypeScript', path: '/career#tech_skills' },
+    { title: 'Svelte', path: '/tech_infographies#Svelte' },
+    { title: 'Vue 3', path: '/tech_infographies#Vue.js' },
+    { title: 'Angular', path: '/tech_infographies#AngularJS' },
+    { title: 'Drupal', path: '/tech_infographies#Drupal' },
+    { title: 'Python', path: '/tech_infographies#Python (Flask)' },
+    { title: 'Hema E-commerce', path: '/tech_infographies#Hema Atelier E-commerce' },
+    { title: 'Whoami Portfolio', path: '/tech_infographies#Whoami Portfolio' },
+    { title: 'Financapp FE', path: '/tech_infographies#Financapp FE' },
+    { title: 'Financapp BE', path: '/tech_infographies#Financapp BE' },
+    { title: 'Exodus FE', path: '/tech_infographies#Exodus FE' },
+    { title: 'Exodus BE', path: '/tech_infographies#Exodus BE' },
+    { title: 'Coosto\'s public website', path: '/tech_infographies#Coosto\'s website' },
+    { title: 'Poetry AI Generator', path: '/tech_infographies#Poetry AI Generator with Machine Learning' },
+  ];
 
   // Toggle the menu
   const toggleMenu = () => {
@@ -24,6 +62,11 @@
     locale.set(lang);
     isLanguageMenuOpen = false;
   };
+
+  // Filter search results
+  let filteredResults = [];
+  $: filteredResults = queryItems.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()));
+
 
   // Initialize i18n (just as a placeholder)
   init({
@@ -56,9 +99,9 @@
     border: none;
     background: none;
     left: -14px;
+    margin-top: 8px;
   }
 
-  /* Hamburger Icon (3 lines) */
   .hamburger-button span {
     position: absolute;
     height: 2px;
@@ -83,7 +126,6 @@
     width: 24px;
   }
 
-  /* X Icon Transformation */
   .hamburger-button.open span:nth-child(1) {
     transform: rotate(45deg);
     top: 50%;
@@ -120,8 +162,6 @@
     color: white;
   }
 
-  /* More styles for the hamburger button and icons */
-
   .language-switcher {
     display: flex;
     align-items: center;
@@ -134,8 +174,6 @@
     margin-left: 5px;
     color: white;
   }
-
-  /* Language Dropdown */
   .language-dropdown {
     position: absolute;
     top: 30px;
@@ -207,7 +245,6 @@
     align-items: center;
   }
 
-  /* Reset the default styles of <li> */
   nav li {
     list-style-type: none;
     margin: 0;
@@ -228,6 +265,7 @@
 
   .logo {
     color: white;
+    margin-top: 8px;
   }
 
   .overlay {
@@ -237,6 +275,67 @@
     width: 100vw;
     height: 100vh;
     background: transparent;
+  }
+
+  .search-container {
+    position: relative;
+    text-align: center;
+    flex: 1;
+  }
+
+  .search-bar {
+    width: 60%;
+    padding: 8px 12px;
+    font-size: 16px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 6px;
+    outline: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .search-bar:hover, .search-bar:focus, .search-bar:not(:placeholder-shown) {
+    background: white;
+    color: black;
+  }
+
+  .search-results {
+    position: absolute;
+    background: white;
+    color: black;
+    width: 60%;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    margin-left: 20%;
+    border-radius: 6px;
+    margin-top: 5px;
+  }
+
+  .search-results a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .search-results a:hover {
+    background: #f0f0f0;
+  }
+
+  .search-result-item {
+    height: 30px;
+    cursor:pointer;
+  }
+
+  .search-bar::placeholder {
+    color: white;
+  }
+
+  .search-bar::placeholder::hover {
+    color: black;
   }
 </style>
 
@@ -251,6 +350,19 @@
     <span></span>
   </button>
   <div class="logo"><a href="/" on:click={closeMenu}>Whoami_</a></div>
+
+  <div class="search-container">
+    <input type="text" bind:value={searchQuery} placeholder={$t("search_placeholder")} class="search-bar" />
+    {#if searchQuery && filteredResults.length > 0}
+      <div class="search-results">
+        {#each filteredResults as result}
+          <div class="search-result-item" on:click={() => { closeMenu(); window.location.href = result.path; }}>
+            {$t(result.title)}
+          </div>
+        {/each}
+      </div>
+    {/if}
+  </div>
 
   <div class="user-icon">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40" height="40">
@@ -273,15 +385,11 @@
 </div>
 
 <div class="overlay" on:click={closeMenu} style:display={isOpen ? 'block' : 'none'}></div>
+
 <div class={`menu ${isOpen ? 'open' : ''}`}>
   <nav>
-    <li><a href="/about" on:click={closeMenu}>{$t('about_me')}</a></li>
-    <li><a href="/resume" on:click={closeMenu}>{$t('resume')}</a></li>
-    <li><a href="/career" on:click={closeMenu}>{$t('career_path')}</a></li>
-    <li><a href="/projects" on:click={closeMenu}>{$t('projects')}</a></li>
-    <li><a href="/tech_infographies" on:click={closeMenu}>{$t('tech_infographies')}</a></li>
-    <li><a href="/blog" on:click={closeMenu}>{$t('blog')}</a></li>
-    <li><a href="https://github.com/manugarcial" on:click={closeMenu}>{$t('github')}</a></li>
-    <li><a href="https://linkedin.com/in/manuel-g-a5b879156" on:click={closeMenu}>{$t('linkedin')}</a></li>
+    {#each menuItems as item}
+      <li><a href={item.path} on:click={closeMenu}>{$t(item.title)}</a></li>
+    {/each}
   </nav>
 </div>

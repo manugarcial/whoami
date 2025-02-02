@@ -154,5 +154,6 @@
   "poetry_ai_gen_reason": "Generador de poesía mediante IA basada en redes neuronales",
   "data_gen": "Generación de datos",
   "mach_learn": "Aprendizaje computacional",
-  "neural_net": "Redes neuronales"
+  "neural_net": "Redes neuronales",
+  "search_placeholder": "Buscar"
 }

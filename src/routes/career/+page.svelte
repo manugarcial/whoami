@@ -36,37 +36,37 @@
 </script>
 
 <main>
-  <h1>{$t("work_experience")}</h1>
+  <h1 id="work_experience">{$t("work_experience")}</h1>
   <Accordion sections={workExperience.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
   }))} />
   <br>
-  <h1>{$t("education")}</h1>
+  <h1 id="education">{$t("education")}</h1>
   <Accordion sections={education.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
   }))} />
   <br>
-  <h1>{$t("volunteering")}</h1>
+  <h1 id="volunteering">{$t("volunteering")}</h1>
   <Accordion sections={volunteering.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
   }))} />
   <br>
-  <h1>{$t("tech_skills")}</h1>
+  <h1 id="tech_skills">{$t("tech_skills")}</h1>
   <Accordion sections={tech_skills.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
   }))} />
   <br>
-  <h1>{$t("personal_skills")}</h1>
+  <h1 id="personal_skills">{$t("personal_skills")}</h1>
   <Accordion sections={personal_skills.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
   }))} />
   <br>
-  <h1>{$t("languages")}</h1>
+  <h1 id="languages">{$t("languages")}</h1>
   <Accordion sections={language.map(section => ({
     title: $t(section.titleKey),
     content: $t(section.contentKey),
