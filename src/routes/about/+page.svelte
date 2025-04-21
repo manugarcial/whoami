@@ -68,6 +68,12 @@
 <div class="container">
   <img src={profilePic} alt="Profile" class="profile-pic">
   <h1>{name}</h1>
+  Domain manager
+  <p>
+    {$t("domain_manager")}
+  </p>
+  <br>
+  Previous proffesional roles
   <h2>{title}</h2>
   <br>
   <p>

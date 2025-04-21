@@ -127,6 +127,19 @@
   <section class="experience">
     <hr />
     <h2 class="section-title">{$t("work_experience")}</h2>
+    <h3><strong>{$t("work_experience_4_title")}</strong></h3>
+    <p>{$t("work_experience_4_subtitle")}</p>
+    <br>
+    <p>{$t("work_experience_4_detail")}
+    </p>
+    <br>
+    <ul>
+      <li>{$t("work_experience_4_feature_1")}</li>
+      <li>{$t("work_experience_4_feature_2")}</li>
+      <li>{$t("work_experience_4_feature_3")}</li>
+      <li>{$t("work_experience_4_feature_4")}</li>
+    </ul>
+    <br>
     <h3><strong>{$t("work_experience_1_title")}</strong></h3>
     <p>{$t("work_experience_1_subtitle")}</p>
     <br>
@@ -200,6 +213,7 @@
       <li>{$t("skills_proffessional_2")}</li>
       <li>{$t("skills_proffessional_3")}</li>
       <li>{$t("skills_proffessional_4")}</li>
+      <li>{$t("skills_proffessional_5")}</li>
     </ul>
   </section>
   <section class="languages">

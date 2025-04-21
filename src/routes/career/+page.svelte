@@ -3,6 +3,7 @@
   import { t } from 'svelte-i18n';
 
   const workExperience = [
+    { titleKey: "work_experience_title_4", contentKey: "work_experience_content_4" },
     { titleKey: "work_experience_title_1", contentKey: "work_experience_content_1" },
     { titleKey: "work_experience_title_2", contentKey: "work_experience_content_2" },
     { titleKey: "work_experience_title_3", contentKey: "work_experience_content_3" },
@@ -27,6 +28,7 @@
     { titleKey: "personalskills_title_2", contentKey: "personalskills_content_2" },
     { titleKey: "personalskills_title_3", contentKey: "personalskills_content_3" },
     { titleKey: "personalskills_title_4", contentKey: "personalskills_content_4" },
+    { titleKey: "personalskills_title_5", contentKey: "personalskills_content_5" },
   ];
   const language = [
     { titleKey: "language_title_1", contentKey: "language_content_1" },
